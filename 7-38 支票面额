@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+	int cot = 0;
+	int n, y, f;
+	scanf_s("%d", &n);
+	for (f = 0; f < 100; f++)
+	{
+		for (y = 0; y < 100; y++)
+		{
+			if (100 * f + y - n == 2 * (100 * y + f))
+			{
+				cot = 1;
+				printf("%d.%d", y, f);
+
+			}
+		}
+	}
+	if (cot == 0)
+		printf("No Solution");
+	return 0;
+}
